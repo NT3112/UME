@@ -14,7 +14,7 @@ class Analyze(APIView):
         if query:
             analysis=analyze_text(query)
             tone=analysis.get("tone","unknown")
-            intent=analysis.get("tone","unknown")
+            intent=analysis.get("intent","unknown")
             suggestions=suggest_actions(intent)
 
             query_log=QueryLog.objects.create(
@@ -29,4 +29,3 @@ class Analyze(APIView):
 
 
 
-# Create your views here.
