@@ -12,5 +12,5 @@ class QueryLog(models.Model):
     
 
     def __str__(self):
-        return f"{self.query[:30]}... ({self.tone}, {self.intent})"
+        return f"({self.tone}, {self.intent})"
 
